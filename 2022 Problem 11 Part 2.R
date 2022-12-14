@@ -69,10 +69,10 @@ while(i <= length(M7)){
 M7m <- as.data.frame(M7m)
 
 
-df <- matrix(ncol = 8, nrow = 20)
+df <- matrix(ncol = 8, nrow = 10000)
 
 i <- 1 
-while (i <= 20){
+while (i <= 10000){
   M0i <- 1
   df[i,1] <- length(M0m[,1])
   
@@ -209,6 +209,7 @@ while (i <= 20){
     M7m <- M7m[-M7i,]
   } # end M7i while loop
   i<- i+1
+  print(i)
 }#end round loop
 
 M0Total <- sum(df[,1])
